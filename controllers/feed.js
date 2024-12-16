@@ -11,6 +11,10 @@ exports.createPosts = function (req, res, next) {
   // Create db post
   res.status(201).json({
     message: 'Post created successfully!',
-    post: {id: new Date().toISOString().replaceAll(':', '')}
+    post: {
+      id: new Date().toISOString().replaceAll(':', ''),
+      title,
+      content,
+    }
   })
 }
